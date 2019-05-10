@@ -1,0 +1,10 @@
+<header>
+	<h1><%= @battle.title %></h1>
+</header>
+
+<div class='content-main'>
+<p><%= @battle.description %></p>
+<%= link_to "<<Back to Battles", battles_path %>
+<%= link_to "delete", battle_path(@battle), method: :delete, data: {confirm: "Really delete the article?"} %>
+<%= link_to "edit", edit_battle_path(@battle) %>
+</div>

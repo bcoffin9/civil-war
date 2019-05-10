@@ -1,5 +1,8 @@
-<h1>All Battles</h1>
+<header>
+	<h1>All Battles</h1>
+</header>
 
+<div class='content-main'>
 <ul id='battles'>
 	<% @battles.each do |battle| %>
 	  <li>
@@ -8,5 +11,7 @@
 	  <% end %>
 </ul>
 
+
 <%= link_to "Log a New Battle", new_battle_path, class: "new_battle" %>
+</div>
 
