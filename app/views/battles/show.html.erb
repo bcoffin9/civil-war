@@ -2,9 +2,18 @@
 	<h1><%= @battle.title %></h1>
 </header>
 
-<div class='content-main'>
-<p><%= @battle.description %></p>
-<%= link_to "<<Back to Battles", battles_path %>
-<%= link_to "delete", battle_path(@battle), method: :delete, data: {confirm: "Really delete the article?"} %>
-<%= link_to "edit", edit_battle_path(@battle) %>
+<div class='content-main-aside'>
+	<div id='main'>
+		<p><%= @battle.description %></p>
+	</div>
+
+	<div id='aside'>
+		<h3>Scenes (<%= @battle.scenes.size %>)</h3>
+		<%= render partial: 'battles/scene', collection: @battle.scenes %>
+		<%= render partial: 'scenes/form' %>
+	</div>
 </div>
+
+	<%= link_to "<<Back to Battles", battles_path %>
+	<%= link_to "delete", battle_path(@battle), method: :delete, data: {confirm: "Really delete the article?"} %>
+	<%= link_to "edit", edit_battle_path(@battle) %>

@@ -5,6 +5,8 @@ class BattlesController < ApplicationController
 
     def show
     	@battle = Battle.find(params[:id])
+        @scene = Scene.new
+        @scene.battle_id = @battle.id
     end
 
     def new
