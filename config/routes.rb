@@ -4,5 +4,6 @@ Rails.application.routes.draw do
     resources :battles do
     	resources :scenes
     end
+    resources :tags
 
 end

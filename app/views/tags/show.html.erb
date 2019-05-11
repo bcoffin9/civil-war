@@ -1,0 +1,15 @@
+<header>
+	<h1><%= @tag.name %></h1>
+</header>
+
+<h3>Associated Battles</h3>
+
+<div>
+	<ul>
+	<% @tag.battles.each do |battle| %>
+			<li><%= link_to battle.title, battle_path(battle) %></li>
+		<% end %>
+	<ul>
+</div>
+
+<%= link_to "<< Back to Tags", tags_path %>

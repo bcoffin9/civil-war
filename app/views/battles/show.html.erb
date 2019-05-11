@@ -12,6 +12,12 @@
 		<%= render partial: 'battles/scene', collection: @battle.scenes %>
 		<%= render partial: 'scenes/form' %>
 	</div>
+
+	<div>
+		Tags:
+		<% @battle.tags.each do |tag| %>
+			<%= link_to tag.name, tag_path(tag) %>
+		<% end %>
 </div>
 
 	<%= link_to "<<Back to Battles", battles_path %>
