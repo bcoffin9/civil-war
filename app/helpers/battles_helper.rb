@@ -1,7 +1,7 @@
 module BattlesHelper
 	
 	def battle_params
-		params.require(:battle).permit(:title, :description, :tag_list)
+		params.require(:battle).permit(:title, :description, :tag_list, :image)
 	end
 end
 

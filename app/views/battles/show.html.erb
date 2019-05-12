@@ -3,6 +3,9 @@
 </header>
 
 <div class='content-main-aside'>
+	<% if @battle.image.exists? %>
+	<p><%= image_tag @battle.image.url(:medium) %></p>
+	<% end %>
 	<div id='main'>
 		<p><%= @battle.description %></p>
 	</div>
